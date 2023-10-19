@@ -1,30 +1,31 @@
 // @ts-check
-const path = require("path")
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
   mode: "development",
   entry: "./src/index.tsx",
-  
+
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "main.js",
   },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
-    extensionAlias: {
+    alias: {
+      // Use `alias` instead of `extensionAlias`
       ".js": [".js", ".ts"],
       ".cjs": [".cjs", ".cts"],
-      ".mjs": [".mjs", ".mts"]
-    }
+      ".mjs": [".mjs", ".mts"],
+    },
   },
   module: {
     rules: [
       {
         test: /\.([cm]?ts|tsx)$/,
         exclude: /node_modules/,
-        use: "ts-loader"
+        use: "ts-loader",
       },
       {
         test: /\.(sa|sc|c)ss$/i,
@@ -42,11 +43,11 @@ const config = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
     ],
   },
