@@ -37,7 +37,7 @@ const config = {
         ],
       },
       {
-        test: /\.test\.ts$/,
+        test: /\.(test|spec)\.tsx?$/,
         exclude: /node_modules/,
         use: "ts-loader",
       },
