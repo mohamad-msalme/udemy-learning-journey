@@ -7,7 +7,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "watch": "webpack --watch",
-    "start": "webpack serve --open --mode development",
+    "start": "webpack serve --open --watch --mode development",
     "build": "webpack",
     "lint": "eslint . --ext .ts,.tsx",
     "tsc": "tsc"
@@ -16,6 +16,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
